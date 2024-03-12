@@ -91,5 +91,5 @@ Once having those dependencies locally installed:
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Author
-Maria Angulo.
-[GitHub](https://github.com/maferadr)
+- Maria Angulo.
+- [GitHub](https://github.com/maferadr)
