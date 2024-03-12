@@ -7,7 +7,9 @@ app.use(express.static('../client/dist'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-require('./routes/htmlRoutes')(app);
+app.get('*', function (req, res){
+    res.sendFile(path.join(__dirname, '../client/dist', 'index.html'));
+});
 
 app.listen(PORT, function(){
     console.log(`App listening to PORT ${PORT}`);
