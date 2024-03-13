@@ -86,6 +86,8 @@ Once having those dependencies locally installed:
 - WorkBox and Webpack.
 - Indexed DataBase.
 
+## Render Deployment
+[Text Editor](https://text-editor-pwa-jir8.onrender.com)
 
 ## License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
