@@ -13,15 +13,15 @@ const initDb = async () =>
     });
 
     //Add logic to a method that accepts some content and adds it to the database.
-    export const postDb = async (content) => {
+    export const putDb = async (content) => {
         console.log(`Adding content to the database`);
         
         //Connection to the database created
-        const contentDb = await openDB('content', 1);
+        const contentDb = await openDB('jate', 1);
         //New transaction and parameters are being specified
-        const tx = contentDb.transaction('content', 'readwrite');
+        const tx = contentDb.transaction('jate', 'readwrite');
         //Open up the desired object store.
-        const store = tx.objectStore('content');
+        const store = tx.objectStore('jate');
         // .add() method on the store and pass in the content.
         const request = store.add( { content: content });
         //GET confirmation of the request.
@@ -33,11 +33,11 @@ const initDb = async () =>
     export const getDb = async () =>{
         console.log(`GET all data from the database`);
 
-        const contentDb = await openDB('content', 1);
+        const contentDb = await openDB('jate', 1);
         // New transaction to specify the database and data privileges/
-        const tx = contentDb.transaction('content', 'readonly');
+        const tx = contentDb.transaction('jate', 'readonly');
         //Object store
-        const store = tx.objectStore('content');
+        const store = tx.objectStore('jate');
         const request = store.getAll();
 
         //Confirmation to that request

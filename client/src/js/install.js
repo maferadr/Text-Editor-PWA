@@ -3,9 +3,9 @@ const btnInstall = document.getElementById('buttonInstall');
 //Logic for installing the PWA
 
 //Deferred installation allows the developer to display the installation prompt only when the user performs certain action.
-window.addEventListener('beforeinstallprompt', (e)=>{
+window.addEventListener('beforeinstallprompt', (event)=>{
     //Store the triggered events
-    window.deferredPrompt = e;
+    window.deferredPrompt = event;
     //Remove the hidden class from the button
     btnInstall.classList.toggle('hidden', false);
 });
@@ -24,7 +24,7 @@ btnInstall.addEventListener('click', async () =>{
 
 });
 
-window.addEventListener('appinstalled', (e) =>{
+window.addEventListener('appinstalled', (event) =>{
     //clear prompt
     window.deferredPrompt = null;
 })
